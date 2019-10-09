@@ -16,7 +16,6 @@
     }else{
       alert('Not number!!!');
     }
-    */
     function returnF(){
       alert('A');
       return;
@@ -25,6 +24,25 @@
 
     var output = returnF();
     alert(typeof(output) + ' : ' + output);
+
+    function callTenTimes(callback){
+      for (var i = 0; i < 10; i++){
+        callback();
+      }
+    }
+
+    var callback = function() {
+      alert('FUNCTION CALL');
+    }
+    callTenTimes(callback);
+    */
+
+    function test(name){
+      var output = 'Hello ' + name + '..!';
+    }
+
+    alert(output);
+
     </script>
   </head>
   <body>
