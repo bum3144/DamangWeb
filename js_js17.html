@@ -25,7 +25,6 @@
       method: function(){ }
     };
       object.method();
-  */
 
     var person = {
       name: 'Jeremy',
@@ -33,11 +32,21 @@
         alert( this.name + ' ate '+ food + '..!');
       }
     };
-
-
     person.eat('rice');
+  */
 
+    var student = {
+      name: 'jeremy',
+      age: 18,
+      addr: 'Cainta Rizal',
+      birthday: 'Dec 2'
+    };
 
+    var data = '';
+    for(var key in student){
+      data += '* ' + key + ': ' + student[key] + '\n';
+    }
+    alert(data);
 
     </script>
   </head>
