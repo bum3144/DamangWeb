@@ -35,14 +35,26 @@
       alert('FUNCTION CALL');
     }
     callTenTimes(callback);
-    */
 
     function test(name){
       var output = 'Hello ' + name + '..!';
     }
 
     alert(output);
+    */
 
+    var student = {
+      name: 'jeremy',
+      age: 18,
+      addr: 'Cainta Rizal',
+      birthday: 'Dec 2'
+    };
+
+    var output = '';
+    for (var i in student) {
+      output += '* ' + i + ': ' + student[i] + '\n';
+    }
+    alert(output);
     </script>
   </head>
   <body>
