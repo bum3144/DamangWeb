@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascritp - encoding</title>
+    <script type="text/javascript">
+      /*
+      1. escape()
+      //=> without Alphabets, numbers,
+      //some special characters( @ , * , - , _ , + , . , / )
+      var URI = 'http://ittc.kr?test=12test';
+      alert(escape(URI));
+
+      2. encodeURI()
+      //=> for URL, without some special characters ( : , ; , / , = , ? , & )
+      var URI = 'http://ittc.kr?test=12@#$%^test?가나다라';
+      alert(encodeURI(URI));
+
+      3. encodeURIComponent()
+      ==> without Alphabets, numbers
+      */
+      var URI = 'http://ittc.kr?test=12@#$%^test?가나다라';
+      alert(encodeURIComponent(URI));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
