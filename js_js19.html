@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - toString()</title>
+    <script type="text/javascript">
+      var student = { };
+
+      //insert
+      student.name = 'Jeremy';
+      student.age = 22;
+      student.hobby = 'singing';
+      student.school = 'UP'
+
+      // var output = '';
+      // for (var i in student){
+      //   output += i + ' : ' + student[i] + '\n';
+      // }
+      // alert(output);
+      student.toString = function () {
+        var output = '';
+        for (var key in this){
+          if(key != 'toString'){
+            output += key + '  ' + this[key] + '\n';
+          }
+        }
+        return output;
+      };
+
+      alert(student.toString());
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
