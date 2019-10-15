@@ -11,7 +11,7 @@
         this.usermat = math;
         this.usereng = english;
         this.usersci = science;
-
+/*
         // method
         this.getSum = function () {
           return this.userkor + this.usermat + this.usereng + this.usersci;
@@ -22,7 +22,20 @@
         this.toString = function () {
           return this.username + '\t' + this.getSum() + '\t' + this.getAverage();
         };
+*/
       };
+      // method
+      //prototype
+      Student.prototype.getSum = function () {
+        return this.userkor + this.usermat + this.usereng + this.usersci;
+      };
+      Student.prototype.getAverage = function () {
+        return this.getSum() / 4;
+      };
+      Student.prototype.toString = function () {
+        return this.username + '\t' + this.getSum() + '\t' + this.getAverage();
+      };
+
 
       //  var student = new Student('jeremy',90,77,72,82);
       // student infomation - array
