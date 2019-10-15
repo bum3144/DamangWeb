@@ -41,20 +41,59 @@
     }
 
     alert(output);
+
+        var student = {
+          name: 'jeremy',
+          age: 18,
+          addr: 'Cainta Rizal',
+          birthday: 'Dec 2'
+        };
+
+        var output = '';
+        for (var i in student) {
+          output += '* ' + i + ': ' + student[i] + '\n';
+        }
+        alert(output);
+
+
+
+
+
+             function Student(name,korean,math,english,science) {
+              this.sname = name;
+              this.skorean = korean;
+              this.smath = math;
+              this.senglish = english;
+              this.sscience = science;
+
+              this.getSum = function () {
+                return this.skorean + this.smath + this.senglish + this.sscience;
+              };
+              this.getAverage = function () {
+                return this.getSum() / 4;
+              };
+              this.toString = function () {
+                return this.sname + '\t' + this.getSum() + '\t' + this.getAverage();
+              };
+             }
+
+             var students = [];
+             students.push(new Student('Jeremy',96,55,79,88));
+             students.push(new Student('Jeremy2',96,55,79,88));
+             students.push(new Student('Jeremy3',96,55,79,88));
+
+             var output = 'name \t total \t avg \n';
+             for (var key in students){
+               output += students[key].toString() + '\n';
+             }
+
+             alert(output);
+
+
+
     */
 
-    var student = {
-      name: 'jeremy',
-      age: 18,
-      addr: 'Cainta Rizal',
-      birthday: 'Dec 2'
-    };
 
-    var output = '';
-    for (var i in student) {
-      output += '* ' + i + ': ' + student[i] + '\n';
-    }
-    alert(output);
     </script>
   </head>
   <body>
