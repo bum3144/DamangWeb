@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - constructor</title>
+    <script type="text/javascript">
+      function Student(name,korean,math,english,science) {
+        //property
+        this.username = name;
+        this.userkor = korean;
+        this.usermat = math;
+        this.usereng = english;
+        this.usersci = science;
+
+        // method
+        this.getSum = function () {
+          return this.userkor + this.usermat + this.usereng + this.usersci;
+        };
+        this.getAverage = function () {
+          return this.getSum() / 4;
+        };
+        this.toString = function () {
+          return this.username + '\t' + this.getSum() + '\t' + this.getAverage();
+        };
+      };
+
+      //  var student = new Student('jeremy',90,77,72,82);
+      // student infomation - array
+      var students = [];
+      students.push(new Student('Jeremy',90,40,80,60));
+      students.push(new Student('Lilian',70,88,82,74));
+      students.push(new Student('John',87,70,91,100));
+      students.push(new Student('Jimwell',66,77,57,70));
+      students.push(new Student('Kale',96,97,87,79));
+      students.push(new Student('Joy',76,67,77,59));
+
+      //out put
+      var output = 'Name \t Total \t Avg \n';
+      for (var i in students){
+        output += students[i].toString() + '\n';
+      }
+
+      alert(output);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
