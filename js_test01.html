@@ -92,7 +92,36 @@
 
 
     */
+    function Rectangle(w,h){
+      var width = w;
+      var hight = h;
 
+      this.getWidth = function () { return w; };
+      this.getHight = function () { return h; };
+      this.setWidth = function (w) {
+        if(w<0){
+          throw 'The length cannot be negative.';
+        }else{
+          width = w;
+        }
+      };
+      this.setHight = function (h) {
+        if(h<0){
+          throw 'The length cannot be negative.';
+        }else{
+          height = h;
+        }
+      };
+    }
+
+    Rectangle.prototype.getArea = function () {
+      return this.getWidth() * this.getHight();
+    };
+    var rectangle = new Rectangle(5,-7);
+
+
+
+    alert('AREA: ' + rectangle.getArea());
 
     </script>
   </head>
