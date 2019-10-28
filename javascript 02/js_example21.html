@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>js-example 21 - DOM API</title>
+
+  </head>
+  <body>
+
+    <h1>DOM API - Create Elements</h1>
+
+    <form>
+      <textarea id="message" style="width:400px; height:60px;"></textarea>
+      <input type="button" value="Chick" onclick="addMessage();">
+    </form>
+
+    <div id="feedList"></div>
+
+    <script>
+      function addMessage(){
+        var msg = document.getElementById('message');
+
+        var p = document.createElement('p');
+        p.innerHTML = msg.value;
+        msg.value = '';
+
+        var hr = document.createElement('hr');
+        var div = document.getElementById('feedList');
+
+        div.appendChild(p);
+        div.appendChild(hr);
+      };
+
+    </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
