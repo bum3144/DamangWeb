@@ -67,6 +67,36 @@
       var ok;
       console.log(ok);
 
+
+      var name = 'john';
+      console.log(name == 'john' ? "Men" : "Women");
+
+      // Prefix Increment Operator, Prefix Decrement Operator
+      // ++x => X = X + 1;
+      // --y => y = y - 1;
+      var test1 = 3;
+      var sum1 = ++test1 + ++test1 + ++test1;
+      // sum1 = 4 + 5 + 6;
+      console.log(test1, sum1); //6, 15
+
+      var test2 = 10;
+      var min1 = --test2 + --test2 + --test2;
+      // min1 = 9 + 8 + 7
+      console.log(test2, min1); // 7, 24
+
+      // Postfix Increment Operator, Postfix Decrement Operator
+      var test3 = 3;
+      var sum2 = test3++ + test3++ + test3++;
+      // sum2 = 3 + 4 + 5
+      console.log(test3, sum2); // 6, 12
+
+      var v1 = 3;
+      v1 = v1++;
+      console.log(v1);
+
+      var v2 = 3;
+      v2 = ++v2;
+      console.log(v2);
     </script>
   </body>
 </html>
