@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Object</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <script type="text/javascript">
+      "use strict"
+
+      // object => collection of data
+      // object creation syntax => new Object();
+      // number, string, boolean, function, undefined, object
+      // (1) object.label = value;
+      // (2) object['label'] = value;
+      // 1.
+      var obj1 = new Object();
+      obj1.name = 'jeremy';
+      obj1.age = 20;
+      obj1.tel = '0998-111-2222';
+      obj1['address'] = 'Cainta Rizal'; //obj1.address = 'Cainta Rizal';
+      obj1['postno'] = 1900;
+      obj1['hi..^^~@#?'] = 'What??';
+      // obj1.hel_@$%^& = 100; //error
+
+      console.log(obj1.name, obj1.age, obj1.tel, obj1.address, obj1.postno, obj1['hi..^^~@#?']);
+
+      // 2.
+      var student = {}; // new Object();
+      student.name = 'John';
+      student.age = 20;
+      student.email = 'test@test.com';
+      student.tel = '0998-999-1111';
+      student.working = false;
+
+      // 3.
+      // JSON : JavaScript Object Notation
+      var student2 = {
+        name: 'Lilian',
+        age: 30,
+        email: 'hello@test.com',
+        tel: '0998-111-2222',
+        working: true
+      };
+
+      console.log(student.name,student.email);
+      console.log(student2);
+      console.log(student2.tel,student2.working);
+    </script>
+  </body>
+</html>
