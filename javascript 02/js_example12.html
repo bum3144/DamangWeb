@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Object 02</title>
+  </head>
+  <body>
+    <h1>Object 02</h1>
+    <script type="text/javascript">
+      "use strict"
+      // object array
+      // ex 1)
+      var person = [
+        {name:'jeremy', eng:100, math:80, kor:70},
+        {name:'john', eng:90, math:80, kor:95},
+        {name:'lilian', eng:100, math:70, kor:80}
+      ];
+      console.log("===== for =====")
+      for(var i=0; i<person.length; i++){
+        console.log(person[i].name, person[i].eng, person[i].math, person[i].kor);
+      }
+      // ex 2)
+      var student = [
+        {name: 'jermey', age: 20, tel: '0998-111-3333', address: 'canint', birthday: 'Dec 2, 2019'},
+        {name: 'john', age: 30, tel: '0998-111-2222', address: 'manila', birthday: 'July 12, 2000'},
+        {name: 'lilian', age: 23, tel: '0998-111-4444', address: 'bohol', birthday: 'june 22, 1998'},
+        {name: 'kaly', age: 43, tel: '0998-111-5555', address: 'antipolo', birthday: 'Nov 3, 1987'},
+        {name: 'cris', age: 22, tel: '0998-111-6666', address: 'seoul', birthday: 'Dec 17, 2001'}
+      ];
+      console.log("===== for 2 =====");
+      for(var i=0; i<student.length; i++){
+        console.log(
+          student[i].name,
+          student[i].age,
+          student[i].address,
+          student[i].birthday);
+      }
+
+      console.log('===== forEach 1 =====');
+      function st1(student) {
+        console.log(student.name, student.age, student.tel, student.address, student.birthday);
+      }
+      student.forEach(st1);
+
+      console.log('===== forEach 2 =====');
+      student.forEach(function (student) {
+        console.log(student.name, student.age, student.tel, student.address, student.birthday);
+      });
+
+
+
+
+    </script>
+  </body>
+</html>
