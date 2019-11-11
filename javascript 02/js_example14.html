@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Factory mothod 02</title>
+  </head>
+  <body>
+    <h1>Factory method 02</h1>
+    <script type="text/javascript">
+    "use strict"
+
+    function Student(name, kor, eng, math) {
+      this.name = name;
+      this.kor = kor;
+      this.eng = eng;
+      this.math = math;
+    }
+
+    // Initialization - Object array -> use Student()
+    var students = [
+      new Student('Jeremy',100,90,80),
+      new Student('Lilian',90,80,70),
+      new Student('John',80,70,100)
+    ];
+
+    console.log("===== forEach() =====");
+    students.forEach(function (st) {
+      console.log(st.name, st.kor, st.eng, st.math);
+    });
+    </script>
+  </body>
+</html>
