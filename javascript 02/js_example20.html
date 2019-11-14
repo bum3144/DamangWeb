@@ -23,17 +23,26 @@
         <p>TEST....04</p>
       </div>
     </div>
+    <script>
+      "use strict"
+      // getElementById(id)
+      var e1 = document.getElementById('header02');
+      console.log(e1.innerHTML) //TEST 2
 
-  <script>
-    var e1 = document.getElementById('header01');
-    console.log(e1.innerHTML);
+      console.log(document.getElementById('header03').innerHTML);
 
-     var changeText = prompt('insert text here!');
-     e1.innerHTML = changeText;
+      var e4 = document.getElementById('header04');
+      var text = 'Hello Good morning!';
+      console.log(e4.innerHTML = text);
 
-     var tx1 = document.createTextNode('Okay!');
-     e1.appendChild(tx1);
-  </script>
+      var text2 = prompt('insert Text !!');
+      e1.innerHTML = text2;
 
+
+
+
+
+
+    </script>
   </body>
 </html>
