@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "UTF-8">
+<title> j033</title>
+<script>
+"use strict";
+window.onload = function() {
+       //1. 원격 함수를 호출할 객체 준비
+       var xhr = new XMLHttpRequest();
+
+       //2. 함수(또는 정적리소스:HTML,이미지,CSS 등) 주소 준비
+       //1) 데이터전송방식: GET, POST
+       //2) 함수 및 정적 리소스 주소
+       //3) 실행 방법: 비동기 방식 여부
+
+      xhr.open( 'GET', 'js_exaple33-form.html', false );
+
+  //  주의 : HTML을 다운받은 곳이 아닌 다른 컴퓨터의 자원은 요청할 수 없다.
+  //xhr.open('GET','http://www.naver.com', false);
+
+       //3. 함수 호출 = > 요청 보내기
+      xhr.send();
+
+       //4. 결과 가져오기
+       //console.log(xhr.responseText);
+       var content = document.getElementById( 'content');
+      content.innerHTML = xhr.responseText;
+
+};
+
+</script>
+</head>
+<body>
+  <h1 >AJAX: Asynchronous Javascipt And XML </h1>
+<div id='content'>
+
+</div>
+
+
+</body>
+</html>
+
+<!--
+------------ j033_form.html ----------------------
+
+
+<form>
+이름: <input type ="text" name ="name" />< br/>
+전화: <input type ="text" name ="tel" />< br/>
+이메일: <input type ="text" name ="email" />< br/>
+<input type= "submit" value ="등록" />
+</form> -->
