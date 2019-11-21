@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS user action selector</title>
+	<style>
+		h1:hover { color:red; }
+		h1:active { color:blue; }
+
+		input:enabled {background-color: red;}
+		input:disabled {background-color: black;}
+		input:focus {background-color: orange;}
+	</style>
+</head>
+
+<body>
+	<h1>User Action Selector</h1>
+
+	<h2>Enabled</h2>
+	<input type="text" />
+	<h2>Disabled</h2>
+	<input type="text" disabled="disabled" />
+	<h2>checked</h2>
+	<input type="checkbox" checked="checked" />
+</body>
+</html>

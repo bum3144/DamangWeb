@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Test 02</title>
+    <style media="screen">
+    .box1{ background-color: pink; }
+    .box2{ background-color: yellow; }
+    .box3{ background-color: blue; }
+    .box4{ background-color: green; }
+
+      @media (min-width:768px){
+        .boxA:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .boxB{
+          float: left;
+          width: 80%;
+        }
+        .box4{
+          float: left;
+          width: 20%;
+        }
+
+      }
+
+      @media (min-width: 600px){
+        .boxB:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .box2{
+          float: right;
+          width: 75%;
+        }
+        .box3{
+          float: left;
+          width: 25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      Box1
+    </div>
+
+    <div class="boxA">
+      <div class="boxB">
+        <div class="box2">
+          Box2
+        </div>
+
+        <div class="box3">
+          Box3
+        </div>
+      </div>
+
+      <div class="box4">
+        Box4
+      </div>
+    </div>
+  </body>
+</html>

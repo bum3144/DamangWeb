@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>box test</title>
+    <style media="screen">
+      .boxA {
+        border: 2px solid blue;
+        background: skyblue;
+        color: blue;
+      }
+      .boxA .box1 {
+        border: 2px solid Yellow;
+        background: #ffffee;
+        color: #e0e03d;
+        line-height: 200px;
+      }
+      .boxA .box2 {
+        border: 2px solid red;
+        background: pink;
+        color: #eb6877;
+        line-height: 100px;
+      }
+
+
+      .boxA { position: relative; }
+      .box2 { position: absolute; top:150px; left:60px; }
+    </style>
+  </head>
+  <body>
+    <div class="boxA">
+      <div class="box1">
+        BOX1
+      </div>
+
+      <div class="box2">
+        BOX2
+      </div>
+    </div>
+  </body>
+</html>

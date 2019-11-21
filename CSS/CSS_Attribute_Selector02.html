@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Attribute Selector test</title>
+	<style>
+		img[src$=png] { border: 3px solid red; }
+		img[src$=jpg] { border: 5px solid blue; }
+		img[src$=gif] { border: 1px dotted black; }
+	</style>
+</head>
+
+<body>
+	<img src="./images/htmlPNG.png" width="200" height="200" />
+	<img src="./images/htmlJPG.jpg" width="200" height="200" />
+	<img src="./images/htmlGIF.gif" width="200" height="200" />
+</body>
+</html>

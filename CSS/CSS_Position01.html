@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Position</title>
+	<style>
+		div{ border:1px solid black; }
+		.static{ position: static; }
+		.relative1 { position: relative; }
+		.relative2 { 
+			position: relative; 
+			border: 1px solid red;
+			top: -20px; 
+			left: 20px;
+			}
+		.fixed{
+			position: fixed;
+			border: 1px solid green;
+			width: 200px;
+			background-color: green;
+			bottom: 0;
+			right: 0;
+		}	
+
+		.relative{
+			position: relative;
+			border: 1px solid pink;
+			background-color: pink;
+			width: 600px;
+			height: 400px;
+		}
+		.absolute{
+			position: absolute;
+			border: 1px solid yellow;
+			background-color: yellow;
+			width: 300px;
+			height: 200px;
+			top: 120px;
+			right: 0px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div class="static">
+		<p>Static is the default value and not affected by the top, bottom, left, and right properties.</p>
+	</div>
+
+	<div class="relative1">
+		<p>Relative behaves the same as static unless you add some extra properties.</p>
+	</div>
+	<div class="relative2">
+		<p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</p>
+	</div>
+
+	<div class="fixed">
+		<p>A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
+	</div>
+
+	<div class="relative">
+		<p>Absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport.</p>
+		<div class="absolute">
+			<p>If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling.</p>
+		</div>
+	</div>
+
+</body>
+</html>

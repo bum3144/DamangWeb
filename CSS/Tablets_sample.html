@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tablets sample</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+
+<style>
+/* site default setting */
+	* { margin: 0; padding: 0; }
+	body { 
+		font-family: 'Helvetiva', sans-serif;
+		min-width: 760px;
+	}
+	li { list-style: none; }
+	a { text-decoration: none; }
+/* header */
+	#main_header {
+		height: 60px;
+		line-height: 60px;
+		padding-left: 10px;
+		border-bottom: 1px solid black;
+
+		background: #1D4088;
+		color: #ffffff;
+	}
+
+/* navigation */
+	#main_gnb{ 
+		overflow: hidden;
+		border-bottom: 1px solid black;
+		background: #32394A;
+	}
+	#main_gn b > ul.left {
+		overflow: hidden;
+		float: left;
+	}
+	#main_gnb > ul.right {
+		overflow: hidden;
+		float: right;
+	}
+	#main_gnb > ul.left > li { float: left; }
+	#main_gnb > ul.right > li { float: left; }
+
+	#main_gnb a {
+		display: block;
+		padding: 10px 20px;
+		border-left: 1px solid #5f6673;
+		border-right: 1px solid #242A37;
+		color: white;
+		font-weight: bold;
+	}	
+/* contents */
+	#wrap { overflow: hidden; }
+	#wrap > #main_lnb {
+		float: left;
+		width: 200px;
+	}
+	#wrap > #content_wrap {
+		float: left;
+		width: 100%;
+		margin-right: -200px;
+	}
+	#wrap > #content_wrap > #content { padding-right: 200px; }
+/* list */
+	#wrap { background: #71b1d1; }
+	#main_lnb > ul > li > a {
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 15px;
+
+		border-top: 1px solid #96d6f6;
+		border-bottom: 1px solid #6c9eb2;
+		color: white;
+		font-weight: bold;
+	}
+	#content {
+		background: white;
+		border-left: 1px solid black;
+	}
+	article{
+		padding: 10px;
+	}
+
+/* footer */
+	#main_footer{
+		padding: 10px;
+		border-top: 3px solid black;
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+	<header id="main_header">
+		<h1>IT Training Center</h1>
+	</header>
+	<nav id="main_gnb">
+		<ul class="left">
+			<li><a href="#">button1</a></li>
+			<li><a href="#">button2</a></li>
+			<li><a href="#">button3</a></li>
+			<li><a href="#">button4</a></li>
+			<li><a href="#">button5</a></li>
+			<li><a href="#">button6</a></li>
+		</ul>
+		<ul class="right">			
+			<li><a href="#">button</a></li>
+			<li><a href="#">button</a></li>
+		</ul>
+	</nav>
+	<div id="wrap">
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">button</a></li>
+				<li><a href="#">button</a></li>
+				<li><a href="#">button</a></li>
+				<li><a href="#">button</a></li>
+				<li><a href="#">button</a></li>
+			</ul>
+		</nav>
+		<div id="content_wrap">
+			<div id="content">
+				<article>
+					<h1>Main Section Title 01</h1>
+					<p>main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text </p>
+				</article>
+				<article>
+					<h1>Main Section Title 02</h1>
+					<p>main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text </p>
+				</article>
+				<article>
+					<h1>Main Section Title 03</h1>
+					<p>main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text main section test text </p>
+				</article>
+			</div>
+		</div>
+	</div>
+	<footer id="main_footer">
+		<h3> HTML5 + CSS3 BASIC</h3>
+		<address>Website Layout Basic</address>
+	</footer>
+</body>
+</html>

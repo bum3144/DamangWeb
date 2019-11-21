@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Title</title>
+	<style>
+		a[target] { background-color: red; }
+		a[target="_blank"] { color: blue; }
+		a[href~="http://google.com/join"] { background-color: black; }
+		h1[class|="top"] { color:orange; }
+		/*
+		The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
+		*/
+		h2[class^="top"] { color:red; }
+		/* The value does not have to be a whole word! */
+		h3[class$="word"] { color:pink;}
+		/* The value does not have to be a whole word! */
+		h4[class*="I"] { color:darkgray; }
+	</style>
+</head>
+
+<body>
+	<a href="http://google.com" target="_self">google</a><br />
+	<a href="http://google.com" target="_blank">google</a><br />
+	<a href="http://google.com/join">google</a><br />
+	<h1 class="top-start-word">google.com</h1>
+	<h2 class="topword">google.com</h2>
+	<h3 class="endword">google.com</h3>
+	<h4 class="Iamthebest">google.com</h4>
+</body>
+</html>

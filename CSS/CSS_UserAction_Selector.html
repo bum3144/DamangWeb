@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS User action selector</title>
+	<style>
+		/* :hover , :active	*/
+		h1:hover {color: red;}
+		h1:active {color: blue;}
+
+		/* :checked , :focus , :enabled , :disabled */		
+		input:enabled {background-color: white;}
+		input:disabled {background-color: gray;}
+		input:focus {background-color: orange;}
+
+		input[type=checked]:checked + div { height: 0px; }
+
+		div{
+			border: solid 1px red;
+			overflow: hidden;
+			width: 650px; height: 300px;
+
+			-ms-transition-duration: 1s;
+			-webkit-transition-duration: 1s;
+			-moz-transition-duration: 1s;
+			-o-transition-duration: 1s;
+			transition-duration: 1s;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>User Action Selector</h1>
+
+	<h2>Enabled</h2>
+	<input />
+	<h2>Disabled</h2>
+	<input disabled="disabled" />
+	
+	<h2>checked</h2>
+	<input type="checkbox" />
+	<div>
+		<h1>checkbox test</h1>
+		<p>MANILA, Philippines – Tropical Depression Samuel moved closer toward the area of Dinagat Islands, Samar, and Leyte early Tuesday morning, November 20, ahead of its expected landfall there.
+
+In a bulletin issued 8 am on Tuesday, the Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA) said Samuel is already 350 kilometers east of Surigao City, Surigao del Norte. It is moving west northwest at 20 kilometers per hour (km/h).
+
+The tropical depression maintained its strength, with maximum winds of 55 km/h and gustiness of up to 65 km/h. But it is expected to intensify into a tropical storm since it remains over water.
+
+Samuel is expected to make landfall in the Dinagat-Samar-Leyte area on Tuesday evening, already as a tropical storm.</p>
+	</div>
+</body>
+</html>

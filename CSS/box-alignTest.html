@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Title</title>
+<style>
+	.box1{
+		height: 200px;
+		background: red;
+	}
+	.box2{
+		height: 200px;
+		background: blue;
+		float: left; 
+		width: 50%;
+	} 
+	.box3{
+		height: 200px;
+		background: yellow;
+		float: left; 
+		width: 50%;
+	}
+	.box4 {
+		height: 200px;
+		background: green;
+	}
+	.boxA:after { 
+		content: ""; 
+		display: block; 
+		clear: both;
+	}
+</style>
+
+</head>
+<body>
+
+
+<div class="box1">
+BOX 1
+</div>
+
+<div class="boxA">
+	<div class="box2">
+	BOX 2
+	</div>
+
+	<div class="box3">
+	BOX 3
+	</div>
+</div>
+
+<div class="box4">
+BOX 4
+</div>
+
+</body>
+</html>
