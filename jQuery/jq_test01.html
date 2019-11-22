@@ -4,7 +4,43 @@
     <meta charset="utf-8">
     <title>Jquery test 01</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style media="screen">
+      p {
+          border: 1px solid blue;
+          width: 100px; height: 100px;
+          padding: 20px; margin: 5px;
+          text-align: center;
+          box-sizing: border-box;
+          background-color: red;
+      }
+      .styled {
+          border: 0;
+          line-height: 2.5;
+          padding: 0 20px;
+          font-size: 1rem;
+          text-align: center;
+          color: #fff;
+          text-shadow: 1px 1px 1px #000;
+          border-radius: 10px;
+          background-color: rgba(220, 0, 0, 1);
+          background-image: linear-gradient(to top left,
+                                            rgba(0, 0, 0, .2),
+                                            rgba(0, 0, 0, .2) 30%,
+                                            rgba(0, 0, 0, 0));
+          box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                      inset -2px -2px 3px rgba(0, 0, 0, .6);
+      }
 
+      .styled:hover {
+          background-color: rgba(255, 0, 0, 1);
+      }
+
+      .styled:active {
+          box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                      inset 2px 2px 3px rgba(0, 0, 0, .6);
+      }
+
+    </style>
     <script type="text/javascript">
       "use strict"
 
@@ -13,11 +49,22 @@
           $('p').hide();
         });
       });
+
+
+      $(document).ready(function () {
+        $('.favorite').click(function () {
+          $('p:first').hide();
+        });
+      });
     </script>
   </head>
   <body>
     <div class="dv1">
       <p class="p1">Hello World!</p>
     </div>
+    <p>This is a heading</p>
+    <p>This is a paragraph</p>
+    <p>hahahah</p>
+    <input type="button" class="favorite styled" value="CLICK">
   </body>
 </html>
