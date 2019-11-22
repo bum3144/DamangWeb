@@ -43,28 +43,44 @@
     </style>
     <script type="text/javascript">
       "use strict"
-
+      $(document).ready(function () {
+        $('#bt0').mouseleave(function () {
+          $(this).css('background-color','blue');
+        });
+      });
+      $(document).ready(function () {
+        $('#bt0').click(function () {
+          location.reload();
+        });
+      });
       $(document).ready(function () {
         $('p').click(function () {
           $('p').hide();
         });
       });
-
-
       $(document).ready(function () {
-        $('.favorite').click(function () {
+        $('#bt1').click(function () {
           $('p:first').hide();
+        });
+      });
+      $(document).ready(function () {
+        $('#bt2').dblclick(function () {
+          $(this).hide();
         });
       });
     </script>
   </head>
   <body>
+    <input type="reset" id="bt0" class="favorite styled" value="RESET" />
+    <br /><br />
     <div class="dv1">
       <p class="p1">Hello World!</p>
     </div>
     <p>This is a heading</p>
     <p>This is a paragraph</p>
     <p>hahahah</p>
-    <input type="button" class="favorite styled" value="CLICK">
+    <input type="button" id="bt1" class="favorite styled" value="CLICK1" />
+    <br /><br />
+    <input type="button" id="bt2" class="favorite styled" value="DB_CLICK2">
   </body>
 </html>
