@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery - hide, show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style media="screen">
+    p {
+        border: 1px solid blue;
+        width: 100px; height: 50px;
+        padding: 20px; margin: 5px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: red;
+    }
+    .styled {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: rgba(220, 0, 0, 1);
+        background-image: linear-gradient(to top left,
+                                          rgba(0, 0, 0, .2),
+                                          rgba(0, 0, 0, .2) 30%,
+                                          rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                    inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+    .styled:hover {
+        background-color: rgba(255, 0, 0, 1);
+    }
+
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                    inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+    </style>
+  </head>
+  <body>
+    <script>
+      "use strict"
+      // $(selector).hide(speed, callback);
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("#textbox").hide();
+        });
+        $("#show").click(function () {
+          $("#textbox").show();
+        });
+      });
+
+    // $(selector).toggle(speed, callback);
+    $(document).ready(function () {
+      $("#button").click(function () {
+        $("#textbox").toggle();
+      });
+    });
+    </script>
+
+    <p id="hide" class="styled">Hide</p>
+    <p id="show" class="styled">Show</p>
+    <button id="button" class="styled">Toggle</button>
+    <div id="textbox">
+      Hello Good morning!
+    </div>
+  </body>
+</html>
