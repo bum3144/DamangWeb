@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery - Sliding Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style media="screen">
+    #panel,#flip{
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #c3c3c3;
+      background-color: #e5eecc;
+    }
+    #flip{
+      width: 300px;
+    }
+    #flip:hover {
+        background-color: #c9c9c9;
+    }
+    #panel{
+      padding: 50px;
+      /* display:none; */
+    }
+    </style>
+  </head>
+  <body>
+    <script>
+      "use strict"
+
+       // slideDown(), slideUp(), slideToggle()
+       // $(selector).slideDown(speed, callback);
+
+      // $(document).ready(function () {
+      //   $("#flip").click(function () {
+      //     $("#panel").slideDown("slow");
+      //   });
+      // });
+      //
+      // $(document).ready(function () {
+      //   $("#flip").click(function () {
+      //     $("#panel").slideUp("slow");
+      //   });
+      // });
+      //
+      //
+
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").slideToggle("slow");
+        });
+      });
+    </script>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+  </body>
+</html>
