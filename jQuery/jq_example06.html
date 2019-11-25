@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery stop() Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style media="screen">
+      #panel,#flip{
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #c3c3c3;
+        background-color: #e5eecc;
+      }
+      #flip{
+        width: 300px;
+      }
+      #flip:hover {
+          background-color: #c9c9c9;
+      }
+      #panel{
+        padding: 50px;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      "use strict"
+       // $(selector).stop(stopAll, goToEnd);
+       // millisecond 1/1000
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").slideDown(5000);
+        });
+        $("#stop").click(function () {
+          $("#panel").stop();
+        });
+      });
+
+
+    </script>
+
+    <button id="stop">Stop sliding</button>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+  </body>
+</html>
