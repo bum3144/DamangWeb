@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Animations - animate() Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style media="screen">
+    div{
+      background-color: red;
+      height: 100px;
+      width: 100px;
+      position: absolute;
+    }
+    </style>
+  </head>
+  <body>
+    <script>
+      "use strict"
+       // $(selector).animate({params},speed, callback);
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("div").animate({left:'250px'});
+        });
+      });
+
+
+      $(document).ready(function () {
+       $("#btn2").click(function () {
+         $("div").animate({
+           left:'250px',
+           opacity: '0.5',
+           height: '150px',
+           width: '150px'
+         });
+       });
+      });
+
+      // define relative values  +=, -=
+      $(document).ready(function () {
+       $("#btn3").click(function () {
+         $("div").animate({
+           left:'250px',
+           height: '+=150px',
+           width: '+=150px'
+         });
+       });
+      });
+
+      // show, hide, toggle
+      $(document).ready(function () {
+       $("#btn4").click(function () {
+         $("div").animate({
+           height: 'toggle'
+         });
+       });
+      });
+
+
+      $(document).ready(function () {
+       $("#btn5").click(function () {
+         var div = $("div");
+         div.animate({height:'300px',opacity:'0.4'},"slow");
+         div.animate({width:'300px',opacity:'0.8'},"slow");
+         div.animate({height:'100px',opacity:'0.4'},"slow");
+         div.animate({width:'100px',opacity:'0.8'},"slow");
+       });
+      });
+
+
+      $(document).ready(function () {
+       $("#btn6").click(function () {
+         var div = $("div");
+         div.animate({left:'100px',width:'150px'},"slow");
+         div.animate({fontSize:'3em'},"slow");
+       });
+      });
+    </script>
+
+    <button id="btn1">Start Animation</button><br />
+    <button id="btn2">Start Animation2</button><br />
+    <button id="btn3">Start Animation3 - define relative values  +=, -=</button><br />
+    <button id="btn4">Start Animation4 - show, hide, toggle</button><br />
+    <button id="btn5">Start Animation5</button><br />
+    <button id="btn6">Start Animation6</button>
+    <p>By default, All HTML elements have a static position, and cannot be moved. To manipulate the position,
+    remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <div>Hello</div>
+  </body>
+</html>
