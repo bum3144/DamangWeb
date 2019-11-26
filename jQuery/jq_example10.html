@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - DOM 02 : text, html, val, attr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      // Set Content - text(), html(), val()
+      $(document).ready(function() {
+        $("#btn1").click(function () {
+          $("#test1").text("Hello world!");
+        });
+        $("#btn2").click(function () {
+          $("#test2").html("<b>Hello world</b>");
+        });
+        $("#btn3").click(function () {
+          $("#test3").val("Dolly Duck");
+        });
+      });
+
+      // Callback function - text(), html(), val()
+      $(document).ready(function () {
+        $("#btn4").click(function () {
+          $("#test4").text(function (i, origText) {
+            return "Old Text: " + origText + " New Text: Hello world! (index: " + i + ")";
+          });
+        });
+
+        $("#btn5").click(function () {
+          $("#test5").html(function (i, origText) {
+            return "Old Html: " + origText + " New Html: Hello <b>world</b> (index: " + i + ")";
+          });
+        });
+      });
+
+      // Set Attributes - attr()
+      $(document).ready(function () {
+        $("#btn6").click(function () {
+          $("#test6").attr("href","http://google.com").text("GOOGLE");
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Set Content - text(), html(), val()</h1>
+    <p id="test1">This is a paragraph. </p>
+    <p id="test2">This is another paragraph. </p>
+    <p>Input field: <input type="text" id="test3" value="Mickey mouse" /></p>
+    <button id="btn1">Set Text</button><br />
+    <button id="btn2">Set HTML</button><br />
+    <button id="btn3">Set Value</button><br />
+    <hr />
+
+    <h1>Callback function - text(), html(), val()</h1>
+    <p id="test4">This is a <b>bold</b> paragraph. </p>
+    <p id="test5">This is another <b>bold</b> paragraph. </p>
+    <button id="btn4">Show Old/New Text</button><br />
+    <button id="btn5">Show Old/New HTML</button><br />
+    <hr />
+
+    <h1>Set Attributes - attr()</h1>
+    <p><a href="http://facebook.com" id="test6">FACEBOOK</a></p>
+    <button id="btn6">Change href Value</button>
+    <p>Mouse over the link (or click on it) to see that
+      the value of the href attribute has changed.</p>
+  </body>
+</html>
