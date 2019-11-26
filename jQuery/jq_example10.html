@@ -40,6 +40,20 @@
 
         });
       });
+
+      // Callback Function - attr()
+      $(document).ready(function () {
+        $("#btn7").click(function () {
+          $("#test7").attr("href",function (i, origValue) {
+            return origValue + "/ittcus"
+          }).html("FACEBOOK/ITTCUS");
+          // $("#test7").attr("href",function (i, origValue) {
+          //   return origValue + "/ittcus"
+          // }).html("FACEBOOK/ITTCUS").attr("title",function (i, origValue) {
+          //   return origValue + "/ittcus"
+          // });
+        });
+      });
     </script>
   </head>
   <body>
@@ -62,6 +76,13 @@
     <h1>Set Attributes - attr()</h1>
     <p><a href="http://facebook.com" id="test6">FACEBOOK</a></p>
     <button id="btn6">Change href Value</button>
+    <p>Mouse over the link (or click on it) to see that
+      the value of the href attribute has changed.</p>
+    <hr />
+
+    <h1>Callback Function - attr()</h1>
+    <p><a href="http://facebook.com" id="test7" title="facebook">FACEBOOK</a></p>
+    <button id="btn7">Change href Value</button>
     <p>Mouse over the link (or click on it) to see that
       the value of the href attribute has changed.</p>
   </body>
