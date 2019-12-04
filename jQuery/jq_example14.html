@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - CSS method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#b1").click(function () {
+          alert("Background color = " + $("#p1").css("background-color"));
+        });
+
+        // Set CSS propertis
+        $("#b2").click(function () {
+          $("p").css("background-color","yellow");
+        });
+
+        // Set Multiple CSS properties
+        $("#b3").click(function () {
+          $("#p3").css({"background-color":"red", "font-size":"200%"});
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+    <p id="p1" style="background-color:#ff0000">This is a praragraph 1.</p>
+    <button id="b1">Return background-color of p</button>
+    <br><br>
+    <p id="p2" style="background-color:#00ff00">This is a praragraph 2.</p>
+    <button id="b2">Set background-color of p</button>
+    <br><br>
+    <p id="p3" style="background-color:#0000ff">This is a praragraph 3.</p>
+    <button id="b3">Set multiple styles of p</button>
+    <br><br>
+  </body>
+</html>
