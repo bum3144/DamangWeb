@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - CSS : Classes </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      // addClass() - Adds one or more classes to the selected elements.
+      // removeClass() - Removes one or more classes from the selected elements
+      // toggleClass() - Toggles between adding/removing classes from the selected elements
+      // css() - Sets or returns the style attribute
+
+      $(document).ready(function () {
+        $("#addClass1").click(function () {
+          $("h1,h2,p").addClass("blue");
+          $("#div1").addClass("important");
+        });
+
+        $("#addClass2").click(function () {
+          $("#div2").addClass("important blue");
+        });
+
+        $("#removeClass").click(function () {
+          $("h1,h2,p").removeClass("blue");
+        });
+
+        $("#toggleClass").click(function () {
+          $("h1,h2,p").toggleClass("blue");
+        });
+
+      });
+    </script>
+    <style media="screen">
+      .important{
+        font-weight: bold;
+        font-size: xx-large;
+      }
+      .blue{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>H1 - Heading 1</h1>
+    <h2>H2 - Heading 2</h2>
+    <p>P - This is a praragraph.</p>
+    <p>P - This is a another paragraph.</p>
+    <div id="div1">DIV1 - This is some important text 1!</div>
+    <div id="div2">DIV2 - This is some important text 2!</div>
+    <div id="div3">DIV3 - This is some important text 3!</div>
+    <br>
+    <button id="addClass1">Add classes to elements</button><br />
+    <button id="addClass2">Add classes to elements 2</button><br />
+    <button id="removeClass">Remove class from elements</button><br />
+    <button id="toggleClass">Toggle class from elements</button>
+  </body>
+</html>
