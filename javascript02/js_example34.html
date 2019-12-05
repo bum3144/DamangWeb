@@ -15,10 +15,10 @@ window.onload = function() {
         //     응답 받는 데이터의 양이 많을 경우 여러번 호출될 수 있다.
         // 4 : 응답 데이터를 모두 받았다.
         if(xhr.readyState == 4){
-
-              if(xhr.status == 200 { // 서버에서 요청한 자원을 정상적으로 찾아서 보내 줄때,
+        //  console.log(xhr.open('GET', 'j033_form.html', true ));
+              if(xhr.status == 200) { // 서버에서 요청한 자원을 정상적으로 찾아서 보내 줄때,
               // console.log("okok");
-              var content = document.getElementById( 'content');
+              var content = document.getElementById('content');
               content.innerHTML = xhr.responseText;
               }
             }
