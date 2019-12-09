@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - Traversing : siblings(), next(), nextAll().. </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    .siblings * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script>
+      // siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil()
+
+      // 1.1 siblings()
+      $(document).ready(function(){
+        $("h2").siblings().css({"color": "red", "border": "2px solid red"});
+      });
+      // 1.2
+      // $(document).ready(function(){
+      //   $("h2").siblings("p").css({"color": "red", "border": "2px solid red"});
+      // });
+
+      // 2. next()
+      // $(document).ready(function(){
+      //   $("h2").next().css({"color": "red", "border": "2px solid red"});
+      // });
+
+      // 3. nextAll()
+      // $(document).ready(function(){
+      //   $("h2").nextAll().css({"color": "red", "border": "2px solid red"});
+      // });
+
+      // 4. nextUntil()
+      // $(document).ready(function(){
+      //   $("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
+      // });
+
+      //  next(), nextAll(), nextUntil() <===> prev(), prevAll(), prevUntil()
+    </script>
+  </head>
+  <body>
+
+    <div>div (parent)
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+      <p>p</p>
+    </div>
+
+  </body>
+</html>
