@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - Traversing : Filtering </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      // first(), last(), eq(), filter() and not() Methods
+
+      // first()
+      $(document).ready(function(){
+        $("div p").first().css("background-color", "yellow");
+      });
+
+      // last()
+      // $(document).ready(function(){
+      //   $("div p").last().css("background-color", "yellow");
+      // });
+
+      // eq()
+      // $(document).ready(function(){
+      //   $("p").eq(1).css("background-color", "yellow"); // strart 0 ~
+      // });
+
+      // filter()
+      // $(document).ready(function(){
+      //   $("p").filter(".intro").css("background-color", "yellow");
+      // });
+
+      // not()
+      // $(document).ready(function(){
+      //   $("p").not(".intro").css("background-color", "yellow");
+      // });
+    </script>
+  </head>
+  <body>
+
+    <h1>Welcome to My Homepage</h1>
+
+    <p>This is a paragraph. (index 0)</p>
+
+    <div style="border: 1px solid black;">
+      <p>A paragraph in a div. (index 1)</p>
+      <p>Another paragraph in a div. (index 2)</p>
+    </div>
+    <br>
+
+    <div style="border: 1px solid black;">
+      <p>A paragraph in another div.</p>
+      <p class="intro">Another paragraph in another div.</p>
+    </div>
+    <br>
+
+    <div style="border: 1px solid black;">
+      <p class="intro">A paragraph in another div.</p>
+      <p>Another paragraph in another div.</p>
+    </div>
+
+  </body>
+</html>
