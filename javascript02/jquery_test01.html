@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "UTF-8">
+<title>Jquery Test 01</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+"use strict";
+
+$.ajax({
+       url: 'http://www.daum.net.com/',
+       type: 'GET',
+       success: function(res) {
+          $(res).find('div.content').each(function(){
+              $('#here').append($(this).html());
+         });
+
+       }
+     });
+
+
+</script>
+</head>
+<body>
+  <h1>AJAX: Asynchronous Javascipt And XML </h1>
+<div id='content'>
+
+</div>
+
+
+</body>
+</html>
+
+<!--
+js_example33-form.html
+
+
+<form>
+이름: <input type ="text" name ="name" />< br/>
+전화: <input type ="text" name ="tel" />< br/>
+이메일: <input type ="text" name ="email" />< br/>
+<input type= "submit" value ="등록" />
+</form> -->
