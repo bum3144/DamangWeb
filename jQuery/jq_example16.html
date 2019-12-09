@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - Traversing : parent(), parents(), parentsUntil()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /*
+      What is Traversing?
+      jQuery traversing, which means "move through",
+      are used to "find" (or select) HTML elements based on their relation to other elements.
+      Start with one selection and move through that selection until you reach the elements you desire.
+      */
+      // parent(), parents(), parentsUntil()
+
+      // 1. parent()
+      $(document).ready(function(){
+        $("span").parent().css({"color": "red", "border": "2px solid red"});
+      });
+
+      // 2.1 parents()
+      // $(document).ready(function(){
+      //   $("span").parents().css({"color": "red", "border": "2px solid red"});
+      // });
+
+      // 2.2 parents()
+      // $(document).ready(function(){
+      //   $("span").parents("ul").css({"color": "red", "border": "2px solid red"});
+      // });
+
+      // 3. parentsUntil
+      // $(document).ready(function(){
+      //   $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+      // });
+    </script>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ancestors">
+      <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+          <li>li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="width:500px;">div (grandparent)
+        <p>p (direct parent)
+          <span>span</span>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
