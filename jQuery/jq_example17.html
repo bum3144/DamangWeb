@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery - Traversing : children(), find()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    .descendants * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    </style>
+    <script>
+    // 1.1 children()
+    // $(document).ready(function(){
+    //   $("div").children().css({"color": "red", "border": "2px solid red"});
+    // });
+
+    // 1.2
+    // $(document).ready(function(){
+    //   $("div").children("p:first").css({"color": "red", "border": "2px solid red"});
+    // });
+
+    // 2.1 find()
+    // $(document).ready(function(){
+    //   $("div").find("span").css({"color": "red", "border": "2px solid red"});
+    // });
+
+    // 2.2
+    $(document).ready(function(){
+      $("div").find("*").css({"color": "red", "border": "2px solid red"});
+    });    
+    </script>
+  </head>
+  <body>
+
+    <div class="descendants" style="width:500px;">div (current element)
+      <p class="1">p (child)
+        <span>span (grandchild)</span>
+      </p>
+      <p class="2">p (child)
+        <span>span (grandchild)</span>
+      </p>
+    </div>
+
+  </body>
+</html>
