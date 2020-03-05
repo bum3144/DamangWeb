@@ -24,7 +24,7 @@ function makeCalculator() {
       this.note += ' / ' + value;
     };
     calculator.init = function (value) {
-      if(arguments.lengh == 0){
+      if(arguments.length == 0){
         this.sum = 0;
         this.note = '';
       }else{
